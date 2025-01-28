@@ -3,7 +3,7 @@
 // Keyboard col
 
 &default_transform { // The matrix transform for this board is 6 columns over because the left half is 6 columns wide according to the matrix.
-    col-offset = <6>;
+    col-offset = <5>;
 };
 
 &kscan0 {
@@ -18,12 +18,7 @@
 
 // Trackball
 
-// Copy from: https://github.com/tokyo2006/zmk-config-oddball/blob/main/config/boards/shields/oddball/oddball_peripheral_right.overlay
-/* enable &pd0 on split peripheral. typical input device for zephyr input subsystem. */
-/* NOTE 1: use the same device alias (&pd0) on central and peripheral(s) is alright. */
-/* NOTE 2: input event shall be intecepted by module `zmk-split-peripheral-input-relay`. */
-
-
+// Copy from: https://github.com/trentrand/ergonomic-keyboard/blob/main/boards/shields/dactyl_manuform_5x7/dactyl_manuform_5x7_right.overlay
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -58,10 +53,6 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <600>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
     };
 };
 
