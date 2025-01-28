@@ -1,0 +1,16 @@
+if SHIELD_MKII_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "HWM-MKII-TB"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_MKII_LEFT || SHIELD_MKII_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
