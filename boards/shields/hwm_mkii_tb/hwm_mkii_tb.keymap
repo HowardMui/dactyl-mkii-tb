@@ -15,6 +15,17 @@
 
 
 / {
+
+    behaviors {
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+    }
+
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,8 +50,8 @@
     &trans &trans &msc SCRL_UP &trans &trans                                        &trans &trans &trans &trans &trans
     &trans &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT 4 &trans                 &trans &mkp LCLK &mkp MCLK &mkp RCLK &trans
     &trans &trans &trans &trans &trans                                              &trans &trans &trans &trans &trans
-                        &trans &trans &trans            &trans &trans
-                        &trans &trans &trans            &trans
+                        &trans &trans &trans                                    &trans &trans
+                        &trans &trans &trans                                    &trans
             >;
 
             label = "Mouse";
