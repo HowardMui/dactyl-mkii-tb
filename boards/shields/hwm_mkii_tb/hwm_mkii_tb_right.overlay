@@ -1,4 +1,5 @@
 #include "hwm_mkii_tb.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 // Keyboard col
 
