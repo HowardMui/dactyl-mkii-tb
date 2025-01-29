@@ -7,6 +7,7 @@
 #include "mouse.dtsi"
 
 #define DEFAULT 0
+#define MOUSE   1
 
 
 / {
@@ -23,6 +24,18 @@
                     &kp TAB &mt LGUI SPACE &kp BSPC             &mt RET SPACE &kp RSHFT
                     &kp LSHFT &kp LALT &kp RET                  &kp BSPC
             >;
+        };
+
+        // Layer 1
+        mouse_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans                                          &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans                                          &trans &mkp LCLK &mkp MCLK &mkp RCLK &trans
+    &trans &trans &trans &trans &trans                                          &trans &trans &trans &trans &trans
+                        &trans &trans &trans                                   &trans &trans
+                        &trans &trans &trans                                   &trans
+            >;
+
         };
     };
 };
