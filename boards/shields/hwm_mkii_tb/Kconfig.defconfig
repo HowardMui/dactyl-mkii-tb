@@ -1,4 +1,4 @@
-if SHIELD_MKII_RIGHT
+if SHIELD_MKII_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "HWM-MKII-TB"
