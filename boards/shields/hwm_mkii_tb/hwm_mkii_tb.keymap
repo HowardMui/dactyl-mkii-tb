@@ -8,6 +8,7 @@
 
 #define DEFAULT 0
 #define MOUSE   1
+#define BT      2
 
 
 / {
