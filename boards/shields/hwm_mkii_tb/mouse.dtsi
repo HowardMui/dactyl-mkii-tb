@@ -1,7 +1,5 @@
 // Trackball
 
-// Copy from: https://github.com/trentrand/ergonomic-keyboard/blob/main/boards/shields/dactyl_manuform_5x7/dactyl_manuform_5x7_right.overlay
-
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
