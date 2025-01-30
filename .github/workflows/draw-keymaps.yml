@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "*.keymap"
       - "keymap_drawer.config.yaml"
+      - "boards/*/*/*.keymap"
 jobs:
   draw:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
@@ -15,4 +15,4 @@ jobs:
       config_path: "keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
       parse_args: ""
-      draw_args: "charybdis:'-j config/info.json -l five_column_transform'"
+      draw_args: ""
