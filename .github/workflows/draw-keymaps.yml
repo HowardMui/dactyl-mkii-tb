@@ -1,5 +1,10 @@
 name: Draw ZMK keymaps
-on: [push, pull_request, workflow_dispatch]
+on:
+  workflow_dispatch: # can be triggered manually
+  push: # automatically run on changes to following paths
+    paths:
+      - "boards/*/*/*.keymap"
+      - "keymap_drawer.config.yaml"
 
 jobs:
   draw:
